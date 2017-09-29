@@ -1,8 +1,3 @@
-# Example for using this Payout Java-RestAPI.
-
-## Please notice, that you need some additional packages like Guava, Gson, Lombok and Apacha-AsyncClient! This can be found in the pom.xml. We recommend using Maven.
-
-```java
 package com.paysafecard.payout.test;
 
 import com.paysafecard.payout.PaysafePayoutController;
@@ -56,6 +51,3 @@ public class PaysafecardPayoutTest {
 				customer_firstname, customer_lastname, customer_birthday, correlation_id, submerchant_id);
 	}
 }
-```
-
-## examples and extended usage can be found within the script.
