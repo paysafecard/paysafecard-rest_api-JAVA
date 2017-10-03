@@ -7,9 +7,9 @@
 # What can I find here?
 This is our java restapi. Here you can find sample codes for Payment, Payout and Refund!
 
-You can find the full documentation and payment flow of the paysafecard APIs here
-EN: https://www.paysafecard.com/fileadmin/api/
-DE: https://www.paysafecard.com/fileadmin/api/de.html
+You can find the full documentation and payment flow of the paysafecard APIs here:
+- EN: https://www.paysafecard.com/fileadmin/api/
+- DE: https://www.paysafecard.com/fileadmin/api/de.html
 
 # Implementation
 How to integrate paysafecards API:
