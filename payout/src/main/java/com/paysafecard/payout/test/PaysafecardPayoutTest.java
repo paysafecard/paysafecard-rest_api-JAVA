@@ -1,7 +1,7 @@
 package com.paysafecard.payout.test;
 
 import com.paysafecard.payout.PaysafePayoutController;
-import com.paysafecard.payout.enums.Environment;
+import com.paysafecard.paysafebase.enums.Environment;
 
 import java.util.Map.Entry;
 
@@ -27,27 +27,24 @@ public class PaysafecardPayoutTest {
 		String correlation_id = "", submerchant_id = "";
 		
 		payoutController.validatePayout(responseValidate -> {
-					String payout_id = (String) responseValidate.get("id");
-					
-					if(payoutController.requestIsOk()) {
-						final String[] status = {(String) responseValidate.get("status")};
-						
-						if(status[0].equals("VALIDATION_SUCCESSFUL")) {
-							payoutController.executePayout(responseExecute -> {
-										status[0] = (String) responseExecute.get("status");
-										if(status[0].equals("SUCCESS")) {
-											System.out.println("Payout successful!");
-										} else {
-											throw new IllegalStateException("Error with Payment-State! " + payoutController.getError().get("message"));
-										}
-									}, payout_id, amount, currency, client_id,
-									customer_mail, customer_ip, customer_firstname, customer_lastname, customer_birthday,
-									correlation_id, submerchant_id);
+			String payout_id = (String) responseValidate.get("id");
+			
+			if(payoutController.requestIsOk()) {
+				if(responseValidate.get("status").equals("VALIDATION_SUCCESSFUL")) {
+					payoutController.executePayout(responseExecute -> {
+						if(responseExecute.get("status").equals("SUCCESS")) {
+							System.out.println("Payout successful!");
+						} else {
+							throw new IllegalStateException("Error with Payment-State! " + payoutController.getError().get("message"));
 						}
-					} else {
-						throw new IllegalStateException("Error with Payment-Validation! " + payoutController.getError().get("message"));
-					}
-				}, amount, currency, client_id, customer_mail, customer_ip,
-				customer_firstname, customer_lastname, customer_birthday, correlation_id, submerchant_id);
+					}, payout_id, amount, currency, client_id,
+							customer_mail, customer_ip, customer_firstname, customer_lastname, customer_birthday,
+							correlation_id, submerchant_id);
+				}
+			} else {
+				throw new IllegalStateException("Error with Payment-Validation! " + payoutController.getError().get("message"));
+			}
+		}, amount, currency, client_id, customer_mail, customer_ip,
+			customer_firstname, customer_lastname, customer_birthday, correlation_id, submerchant_id);
 	}
 }

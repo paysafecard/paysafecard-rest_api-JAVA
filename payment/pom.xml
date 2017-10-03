@@ -5,11 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.paysafecard</groupId>
-    <artifactId>payout</artifactId>
+    <artifactId>payment</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <name>PaysafePayout</name>
-    <inceptionYear>27/09/2017</inceptionYear>
+    <name>PaysafePayment</name>
+    <inceptionYear>02/10/2017</inceptionYear>
 
     <build>
         <defaultGoal>clean package</defaultGoal>
@@ -42,6 +42,26 @@
                     </execution>
                 </executions>
             </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+
+                <configuration>
+                    <stylesheetfile>../paysafe_doc_stylesheet.css</stylesheetfile>
+                    <show>private</show>
+                    <nohelp>true</nohelp>
+                </configuration>
+                
+                <dependencies>
+                    <dependency>
+                        <groupId>com.paysafecard</groupId>
+                        <artifactId>payment</artifactId>
+                        <version>1.0-SNAPSHOT</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+
         </plugins>
     </build>
 
@@ -88,6 +108,5 @@
             <artifactId>commons-io</artifactId>
             <version>1.3.2</version>
         </dependency>
-
     </dependencies>
 </project>
