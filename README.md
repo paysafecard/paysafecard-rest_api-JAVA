@@ -1,4 +1,4 @@
-<img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Paysafecard_logo.svg" height="50px" align="right" />
+..<img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Paysafecard_logo.svg" height="50px" align="right" />
 
 # PaySafeCard-RestAPI
 > PaySafeCard - a global market leader in online prepaid payment methods, is available in 43 countries at over 500,000 sales outlets and can be used in thousands of online shops worldwide. By using a 16-digit paysafecard PIN, customers can pay quickly, simply and safely online. paysafecard is the perfect solution for customers who value their data security or simply don’t have a credit card.
@@ -32,4 +32,4 @@ Please talk before the implementation with the paysafecard sales team. success@p
 ## Contribute
 
 Contributions are always welcome!
-Please read the [contribution guidelines](/graphs/contributors) first.
+Please read the [contribution guidelines](../graphs/contributors) first.
