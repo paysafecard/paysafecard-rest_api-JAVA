@@ -1,7 +1,7 @@
-# paysafecard
-paysafecard - a global market leader in online prepaid payment methods, is available in 43 countries at over 500,000 sales outlets and can be used in thousands of online shops worldwide. 
-By using a 16-digit paysafecard PIN, customers can pay quickly, simply and safely online. 
-paysafecard is the perfect solution for customers who value their data security or simply don’t have a credit card.
+<img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Paysafecard_logo.svg" height="50px" align="right" />
+
+# PaySafeCard-RestAPI
+> PaySafeCard - a global market leader in online prepaid payment methods, is available in 43 countries at over 500,000 sales outlets and can be used in thousands of online shops worldwide. By using a 16-digit paysafecard PIN, customers can pay quickly, simply and safely online. paysafecard is the perfect solution for customers who value their data security or simply don’t have a credit card.
 
 # paysafecard-JAVA
 paysafecard sample codes for the REST API in JAVA. Payment, Payout, Refund
@@ -28,3 +28,8 @@ https://www.paysafecard.com/business/
 # Payout & Refund
 Not per default active. Special agreement with paysafecard necessary. 
 Please talk before the implementation with the paysafecard sales team. success@paysafecard.com
+
+## Contribute
+
+Contributions are always welcome!
+Please read the [contribution guidelines](contributing.md) first.
