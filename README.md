@@ -1,6 +1,6 @@
 <img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Paysafecard_logo.svg" height="50px" align="right" />
 
-# PaySafeCard-RestAPI [![GitHub issues](https://img.shields.io/github/issues/badges/shields.svg)](../../issues/) [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/esta/issues)
+# PaySafeCard-RestAPI [![GitHub issues](https://img.shields.io/github/issues/badges/shields.svg)](https://github.com/paysafecard/paysafecard-rest_api-JAVA/) [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/esta/issues)
 
 > PaySafeCard - a global market leader in online prepaid payment methods, is available in 43 countries at over 500,000 sales outlets and can be used in thousands of online shops worldwide. By using a 16-digit paysafecard PIN, customers can pay quickly, simply and safely online. paysafecard is the perfect solution for customers who value their data security or simply don’t have a credit card.
 
