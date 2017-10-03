@@ -32,4 +32,4 @@ Please talk before the implementation with the paysafecard sales team. success@p
 ## Contribute
 
 Contributions are always welcome!
-Please read the [contribution guidelines](contributing.md) first.
+Please read the [contribution guidelines](/graphs/contributors) first.
