@@ -126,7 +126,6 @@ public class PaysafePaymentController extends PaySafeBase {
 			URL obj = new URL(this.apiUrl + urlParam);
 			HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 			
-			//add reuqest header
 			con.setRequestMethod("POST");
 			System.setProperty("http.keepAlive", "false");
 			//con.setRequestProperty("Authorization", "Basic " + Base64.getEncoder().encode(this.psc_key.getBytes()).toString());
@@ -140,7 +139,6 @@ public class PaysafePaymentController extends PaySafeBase {
 				con.setRequestProperty(headerKey, headers.get(headerKey));
 			}
 			
-			// Send post request
 			con.setDoOutput(true);
 			DataOutputStream wr = new DataOutputStream(con.getOutputStream());
 			
@@ -150,23 +148,21 @@ public class PaysafePaymentController extends PaySafeBase {
 			wr.close();
 			
 			this.responseCode = con.getResponseCode();
-			BufferedReader in = null;
+			BufferedReader bufferedReader;
 			if (this.responseCode >= 400) {
-				in = new BufferedReader(new InputStreamReader(con.getErrorStream()));
+				bufferedReader = new BufferedReader(new InputStreamReader(con.getErrorStream()));
 			} else {
-				in = new BufferedReader(new InputStreamReader(con.getInputStream()));
+				bufferedReader = new BufferedReader(new InputStreamReader(con.getInputStream()));
 			}
 			
 			String inputLine;
 			StringBuffer response = new StringBuffer();
 			
-			while ((inputLine = in.readLine()) != null) {
+			while ((inputLine = bufferedReader.readLine()) != null) {
 				response.append(inputLine);
 			}
-			in.close();
+			bufferedReader.close();
 			
-			//print result
-			//System.err.println(response.toString());
 			this.response = parseJson(response.toString());
 		} catch (Exception e) {
 			e.printStackTrace();
